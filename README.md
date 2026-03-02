@@ -24,26 +24,25 @@ $$E(x) = \begin{cases} 3 & \text{dla } x \in [0, 1] \\ 5 & \text{dla } x \in (1,
 ---
 
 ## 2. Zawartość repozytorium
-* `szarata_kod_jacva` – Archiwum z kodem źródłowym programu w języku Java.
-* `obliczenia.jpg` – Ręczne wyprowadzenie sformułowania wariacyjnego.
-* `wykres_n=40.jpg` – Przykładowa wizualizacja rozwiązania dla $n=40$.
+* `szarata_kod_java` - Kod programu w języku Java.
+* `obliczenia.jpg` - Ręczne wyprowadzenie sformułowania wariacyjnego.
+* `wykres_n=40.jpg` - Przykładowa wizualizacja rozwiązania dla $n=40$.
 
 ---
 
 ## 3. Wymagania
 Aby uruchomić aplikację, wymagane są:
-* **Java (JDK)** – kompilator i środowisko uruchomieniowe.
-* **gnuplot** – narzędzie służące do generowania wykresów wyników.
+* **Java (JDK)** - kompilator i środowisko uruchomieniowe.
+* **gnuplot** - narzędzie służące do generowania wykresów wyników.
 
 ---
 
 ## 4. Instrukcja uruchomienia
 
-1. **Przygotowanie:** Wypakuj zawartość `szarata_kod_jacva.zip` do wybranego katalogu.
-2. **Kompilacja:** Przejdź do katalogu z kodem i skompiluj pliki:
+1. **Kompilacja:** Przejdź do katalogu z kodem i skompiluj pliki:
    ```bash
    javac *.java
-3. **Uruchomienie:** Program przyjmuje liczbę elementów skończonych `n` jako parametr wejściowy:
+2. **Uruchomienie:** Program przyjmuje liczbę elementów skończonych `n` jako parametr wejściowy:
    ```bash
    java Main 40
 (Gdzie `40` to przykładowa wartość parametru `n`).
