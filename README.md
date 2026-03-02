@@ -1,2 +1,61 @@
-# MES-solution
-Rozwiązanie równania różniczkowego odkształcenia sprężystego metodą elementów skończonych
+# Odkształcenia Sprężyste - Metoda Elementów Skończonych
+
+**Autor:** Maria Szarata  
+**Temat:** 4.3 Odkształcenia sprężyste
+
+---
+
+## 1. Opis projektu
+Projekt realizuje rozwiązanie równania różniczkowego opisującego odkształcenia sprężyste za pomocą **Metody Elementów Skończonych (MES)**. Program oblicza przybliżone rozwiązanie $u(x)$ na przedziale $[0, 2]$.
+
+### Model Matematyczny
+Rozwiązywane jest równanie różniczkowe:
+$$-\frac{d}{dx} \left( E(x) \frac{du(x)}{dx} \right) = 0$$
+
+**Warunki brzegowe:**
+* $u(2) = 0$
+* $\frac{du(0)}{dx} + u(0) = 10$
+
+**Charakterystyka materiałowa:**
+$$E(x) = \begin{cases} 3 & \text{dla } x \in [0, 1] \\ 5 & \text{dla } x \in (1, 2] \end{cases}$$
+
+
+
+---
+
+## 2. Zawartość repozytorium
+* `szarata_kod_jacva` – Archiwum z kodem źródłowym programu w języku Java.
+* `obliczenia.jpg` – Ręczne wyprowadzenie sformułowania wariacyjnego.
+* `wykres_n=40.jpg` – Przykładowa wizualizacja rozwiązania dla $n=40$.
+
+---
+
+## 3. Wymagania
+Aby uruchomić aplikację, wymagane są:
+* **Java (JDK)** – kompilator i środowisko uruchomieniowe.
+* **gnuplot** – narzędzie służące do generowania wykresów wyników.
+
+---
+
+## 4. Instrukcja uruchomienia
+
+1. **Przygotowanie:** Wypakuj zawartość `szarata_kod_jacva.zip` do wybranego katalogu.
+2. **Kompilacja:** Przejdź do katalogu z kodem i skompiluj pliki:
+   ```bash
+   javac *.java
+3. **Uruchomienie:** Program przyjmuje liczbę elementów skończonych `n` jako parametr wejściowy:
+   ```bash
+   java Main 40
+(Gdzie `40` to przykładowa wartość parametru `n`).
+
+## 5. Przebieg rozwiązania
+Proces wyznaczania rozwiązania $u(x)$ składa się z następujących kroków:
+
+* **Wyprowadzenie sformułowania wariacyjnego:** Przekształcenie równania różniczkowego do postaci całkowej (słabej), co zostało udokumentowane w pliku `obliczenia.jpg`.
+* **Dyskretyzacja:** Podział przedziału $[0, 2]$ na $n$ elementów skończonych.
+* **Budowa układu równań:** Wygenerowanie macierzy sztywności oraz wektora obciążeń z uwzględnieniem skokowej zmiany parametru $E(x)$.
+* **Rozwiązanie układu:** Wyznaczenie wartości funkcji w węzłach.
+* **Wizualizacja:** Automatyczne wygenerowanie wykresu przy użyciu narzędzia `gnuplot`.
+
+## 6. Przykładowy wynik
+Poniżej znajduje się wizualizacja odkształcenia dla parametru $n = 40$:
