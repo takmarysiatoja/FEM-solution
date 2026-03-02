@@ -16,8 +16,10 @@ $$-\frac{d}{dx} \left( E(x) \frac{du(x)}{dx} \right) = 0$$
 * $u(2) = 0$
 * $\frac{du(0)}{dx} + u(0) = 10$
 
-**Charakterystyka materiałowa:**
-$$E(x) = \begin{cases} 3 & \text{dla } x \in [0, 1] \\ 5 & \text{dla } x \in (1, 2] \end{cases}$$
+**Charakterystyka materiałowa $E(x)$:**
+
+* $E(x) = 3$ dla $x \in [0, 1]$
+* $E(x) = 5$ dla $x \in (1, 2]$
 
 
 
